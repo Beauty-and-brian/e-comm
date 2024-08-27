@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>360 Video and Animation E-Commerce</title>
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    /> -->
+    <link rel="stylesheet" href="./fontawesome-/css/all.css">
+    <link
+      rel="stylesheet"
+      href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CPoppins:200,300,400,500,600,700,800%7COswald:300,400,500,600,700,800"
+      media="all"
+    />
+    <style>
+      body {
+        font-family: "Open Sans", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+      }
+
+      .top-header {
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+        background-color: #bed542;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        font-size: 14px;
+      }
+
+      .top-header a {
+        color: black;
+        text-decoration: none;
+        margin: 0 10px;
+        transition: all 1s ease;
+      }
+
+      .top-header a:hover {
+        text-decoration: none;
+        background-color: #ddddddb8;
+        padding: 5px;
+      }
+
+      header {
+        background-color: white;
+        color: #5f55d4;
+        display: flex;
+        align-items: center;
+        padding: 10px 20px;
+        padding-top: 6%;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 24px;
+        flex: 1;
+      }
+
+      .header-icons {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .header-icons a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+      }
+
+      .search-bar {
+        flex: 2;
+        text-align: center;
+      }
+
+      .search-bar input[type="text"] {
+        width: 70%;
+        padding: 5px;
+        font-size: 16px;
+        border-radius: 10px;
+      }
+
+      .search-bar input[type="submit"] {
+        padding: 6px 20px;
+        font-size: 16px;
+        background-color: #5f55d4;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+
+    .sticker img{
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      box-shadow:5px 5px 5px#bed542;
+      animation: sticker 2s linear infinite;
+    }
+    @keyframes sticker{
+      0%{
+        transform: rotate(0deg);  
+      }
+      50%{
+        transform:rotate(30deg);
+      }
+      100%{
+        transform: rotate(0deg);
+     }
+    }
+      .sticker img:hover{
+       rotate: 360deg;
+       transition: all 0.5s ease;
+       
+    }
+    
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+        background-color:  #333;
+        text-align: left;
+        margin: 0;
+      }
+
+      nav ul li {
+        display: inline;
+        margin-right: 10px;
+      }
+
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        padding: 14px 20px;
+        display: inline-block;
+        transition: all 2s ease;
+      }
+
+      nav ul li a:hover {
+        background-color: #5f55d4;
+      }
+
+      #main-content {
+        display: flex;
+        flex: 1;
+      }
+
+      #sidebar-left {
+        background-color: #4b4b4984;
+        color: white;
+        width: 15%;
+        padding: 20px;
+        box-sizing: border-box;
+        overflow-y: auto;
+      }
+
+      #sidebar-left h2 {
+        text-align: center;
+        border-bottom: 1px solid #f4f4f4;
+        padding-bottom: 10px;
+      }
+
+      #sidebar-left .video,
+      #sidebar-left .animation {
+        margin: 10px 0;
+      }
+
+      #sidebar-left .video video,
+      #sidebar-left .animation img {
+        width: 100%;
+        display: block;
+      }
+
+      #sidebar-left .sidebar-item {
+        margin: 15px 0;
+        padding: 10px;
+        background-color: #5f55d4;
+        cursor: pointer;
+        transition: all 1.5s ease;
+        position: relative;
+      }
+
+      #sidebar-left .sidebar-item:hover {
+        background-color: #5f55d4;
+      }
+
+      #sidebar-left .sidebar-item a {
+        color: white;
+        text-decoration: none;
+        display: block;
+      }
+
+      #sidebar-left .dropdown {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 100%;
+        background-color: #444;
+        z-index: 1;
+        
+      }
+
+      #sidebar-left .sidebar-item:hover .dropdown {
+        display: block;
+      }
+
+      #sidebar-left .dropdown a {
+        padding: 10px;
+        display: block;
+        text-decoration: none;
+        color: white;
+      }
+
+      #sidebar-left .dropdown a:hover {
+        background-color: #555;
+      }
+      .promo img{
+        width: 100%;
+        height: 400px;
+        margin-top: 30%;
+        border: 2px solid #ddd;
+        box-shadow:15px 15px 5px #333;
+        border-radius: 12px;
+        animation: blink 3s ease-in-out infinite;
+      }
+      @keyframes blink {
+        0% {   
+          opacity: 0.3; 
+          transform:translateY(-8%);
+        }
+        50% {
+          opacity: 1; 
+          transform: translateY(8%);     
+        }
+        100% {
+          opacity: 1; 
+          transform: translateY(-8%);
+        }
+      }
+
+      #products {
+        flex: 1;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 26px;
+        padding: 20px;
+        overflow-y: auto;
+      }
+
+      .product {
+        background-color: white;
+        padding: 10px;
+        border: 1px solid #ddd;
+        text-align: center;
+        transition: all 0.3s ease;
+        border-radius: 12px;
+        max-width: 300px;
+        
+      }
+
+      .product:hover {
+        transform: scale(1.05);
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .image-container {
+            position: relative;
+            width: 100%;
+            padding-top: 96%; 
+            overflow: hidden;
+            border-radius: 12px;
+      }
+
+      .image-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: all 1.5s ease-in-out;
+      }
+
+      .first-image {
+        opacity: 1;
+      }
+
+      .second-image {
+            opacity: 0;
+      }
+
+      .first-image:hover {
+        opacity: 0;
+      }
+
+      .second-image:hover {
+        opacity: 1;
+      }
+
+      .product-caption {
+        text-align: left;
+      }
+
+      .product-caption ul {
+        text-decoration: none;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .product-caption ul li {
+        display: inline;
+      }
+
+      .product-caption i {
+        color: gold;
+        font-size: 12px;
+      }
+
+      .product h4 {
+        margin: 0;
+        padding-bottom: 5px;
+      }
+
+      .product p {
+        margin: 0;
+        padding-bottom: 3px;
+        color:#5f55d4
+      }
+      .product button {
+        display: grid;
+        width: 50%;
+        border: none;
+        color: black;
+        background-color: #bed542;
+        border-radius: 11px;
+        padding: 5px 12px;
+      }
+      .add-to-cart, .remove-from-cart{
+        cursor: pointer;
+      }
+      .red{
+      background-color: red !important;
+        box-shadow:2px 2px 5px rgba(240, 4, 4, 0.3);
+        transform: translateY(-2px);
+        transition: all 5ms ease-out;
+      }
+      .moved {
+        background-color: #5f55d4 !important;
+        box-shadow:2px 2px 5px rgba(4, 47, 240, 0.547);
+        transform: translateY(-2px);
+        transition: all 5ms ease-out;
+      }
+      
+      .product-quantity{
+        font-size: 13px;
+        margin-left: 60%;
+        font-style: italic;
+        
+      }
+      .product img {
+         width: 100%;
+        /*height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: opacity 0.5s ease-in-out; */
+      }
+
+      .ptags p{
+        display: inline-block;
+        margin-bottom: 3PX;
+      }
+      .lclass{
+        color: red !important;
+        font-size: 10PX;
+        font-style: oblique;
+      }
+     
+      .payment-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 33px 15px 27px 15px;
+        /* border-top: 1px solid #bbbbbe;
+            border-bottom: 1px solid #bbbbbe; */
+        margin: 20px 20px;
+      }
+
+      .footer2 {
+        background-color: e9e9ea;
+      }
+
+      /* @media screen and (min-width: 600px){
+            .payment-links {
+            display: block;
+            padding: 50px 0;
+
+        }
+        } */
+
+      .boxing {
+      }
+
+      footer {
+        background-color: #4b4b4984;
+        color: white;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 20px;
+        box-sizing: border-box;
+        margin-top: 0.1%;
+        transition: all 2s ease;
+      }
+
+      footer:hover {
+        /* background-color: #e6791b; */
+      }
+
+      footer > div {
+        flex: 1;
+        padding: 0 10px;
+        text-align: center;
+      }
+
+      footer h2 {
+        font-size: 18px;
+        text-align: center;
+      }
+
+      footer input[type="email"] {
+        border: none;
+        border-radius: 10px;
+        padding: 7px;
+        width: 80%;
+        height: 5vh;
+        margin-bottom: 20px;
+        margin-top: 8px;
+      }
+
+      footer input[type="submit"] {
+        padding: 7px;
+        background-color: #5f55d4;
+        color: white;
+        width: 84%;
+        border: none;
+        cursor: pointer;
+        border-radius: 12px;
+        transform: translateY(-2px);
+        transition: all 5ms ease-out;
+      }
+      input:hover[type="submit"]{
+        transform: translateY(-2px) !important;
+        background-color: #8d83fb;
+        transition: all 5ms ease-out;
+      }
+
+      footer .chat-box {
+        padding: 10px;
+        background-color: white;
+        color: #4b4b49c8;
+        width: 80%;
+        height: 70px;
+        margin-left: 12%;
+       
+      }
+      .chat-box p{
+        margin-left: 38%;
+      }
+      footer p{
+        text-align: left;
+        margin-left: 20%;
+      }
+
+      footer a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+        display: inline-block;
+  
+      }
+
+      footer a:hover {
+        text-decoration:none;
+      }
+
+      footer .social-icons a {
+        font-size: 25px;
+        margin: 10px 5px;
+        
+      }
+
+      .additional-footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        font-size: 14px;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+    
+    </style>
+  </head>
+  <body>
+    <div class="top-header">
+      <marquee behavior="scroll" direction="left">WELCOME TO -360 Video and Animation E-Commerce!</marquee> |
+      <a href="#">MY ACCOUNT</a>
+      |
+      <a href="#">ABOUT US</a>
+      |
+      <a href="#">MY WISHLIST</a>
+      |
+      <a href="#">SITE MAP</a>
+      |
+      <a href="#" id="cart-link">CART <span id="cart-total">(0)</span></a>
+      |
+      <a href="#">LOG IN</a>
+    </div>
+    <header>
+      <h1>
+        360 Video and Animation E-Commerce -A Case Study of Not On The High
+        Street
+      </h1>
+      <div class="search-bar">
+        <form action="#" method="get">
+          <input type="text" name="search" placeholder="Search..." />
+          <input type="submit" value="Search" />
+        </form>
+      </div>
+      <div class="header-icons">
+        <a href="#"><i class="fa fa-shopping-cart"></i></a>
+        <a href="#"><i class="fa fa-user"></i></a>
+        <a href="#"><i class="fa fa-heart"></i></a>
+      </div>
+      <div class="sticker">
+       <img src="./images/products/sticker.png" alt="">
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <div id="main-content">
+      <div id="sidebar-left">
+        <h2>Company Info</h2>
+        <div class="video">
+          <video src="/video/Bag Modeling - 360 degree Video.mp4" controls></video>
+          <!-- <iframe width="173" height="90" src="https://www.youtube.com/embed/fzCLYczjlts?si=Xazg5DqWNfdw2dVG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+        </div>
+        <!-- <div class="animation">
+          <img src="promotion_animation.gif" alt="Promotion Animation" />
+        </div> -->
+        <div class="video">
+          <video src="./video/Woolen Shoe- 360 Video.mp4" controls></video>
+          <!-- <iframe width="173" height="90" src="https://www.youtube.com/embed/IWZ0Efi-pNE?si=EyNRonH-AnfZxU22" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+        </div>
+        <div class="sidebar-item">
+          <a href="#">Top Brands</a>
+          <div class="dropdown">
+            <a href="#">Brand 1</a>
+            <a href="#">Brand 2</a>
+            <a href="#">Brand 3</a>
+            <a href="#">Brand 4</a>
+            <a href="#">Brand 5</a>
+          </div>
+        </div>
+        <div class="sidebar-item">
+          <a href="#">Flash Sales</a>
+          <div class="dropdown">
+            <video src="flash_sales.mp4" controls></video>
+          </div>
+        </div>
+        <div class="sidebar-item">
+          <a href="#">Money Back Guarantee</a>
+          <div class="dropdown">
+            <p>30 Days Return Policy</p>
+          </div>
+        </div>
+        <div class="sidebar-item">
+          <a href="#">Free Shipping & Returns for All Orders Over $90</a>
+        </div>
+        <div class="promo">
+          <img src="./images/products/Promo 4.jpeg" alt="">
+        </div>
+      </div>
+      <section id="products">
+        <div class="product">
+          <div class="image-container">
+            <img class="first-image"src="./images/products/product-1.jpg"alt="camera"/>
+            <img class="second-image"src="./images/products/product-1-2.jpg"alt="camera"/>
+          </div> 
+          <div class="product-caption">
+            <h4>Camera</h4>
+            <ul>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+            </ul>
+            <div class="ptags">
+              <p style="text-decoration: line-through;">£150</p>
+              <p>= £100</p>
+              <p class="lclass">Hot Deal</p>
+             </div>
+            
+            <button class="add-to-cart" >Add To Cart</button><br>
+            <button class="remove-from-cart">Remove From Cart</button>
+
+            <span class="product-quantity">Quantity: <span class="quantity-value">0</span></span>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="image-container">
+            <img class="first-image"src="./images/products/product-9.jpg"alt="shoe"/>
+            <img class="second-image"src="./images/products/product-9-2.jpg"alt="shoe"/>
+          </div> 
+          <div class="product-caption">
+            <h4>Shoe</h4>
+            <ul>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+            </ul>
+            <p>£299.99</p>
+            <button class="add-to-cart" >Add To Cart</button><br>
+            <button class="remove-from-cart">Remove From Cart</button>
+
+            <span class="product-quantity">Quantity: <span class="quantity-value">0</span></span>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="image-container">
+            <img class="first-image"src="./images/products/product-3.jpg"alt="headphones"/>
+            <img class="second-image"src="./images/products/product-3-2.jpg"alt="headphones"/>
+          </div> 
+          <div class="product-caption">
+            <h4>Headphones</h4>
+            <ul>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+            </ul>
+            <div class="ptags">
+              <p style="text-decoration: line-through;">£450</p>
+              <p>= £399.99</p>
+              <p class="lclass">Hot Deal</p>
+             </div>
+            <button class="add-to-cart">Add To Cart</button><br>
+            <button class="remove-from-cart">Remove From Cart</button>
+
+            <span class="product-quantity">Quantity: <span class="quantity-value">0</span></span>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="image-container">
+            <img class="first-image"src="./images/products/product-8.jpg"alt="boots"/>
+            <img class="second-image"src="./images/products/product-8-2.jpg"alt="boots"/>
+          </div> 
+          <div class="product-caption">
+            <h4>Mountain Boots</h4>
+            <ul>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+            </ul>
+            <p>£529.99</p>
+            <button class="add-to-cart">Add To Cart</button><br>
+            <button class="remove-from-cart">Remove From Cart</button>
+
+            <span class="product-quantity">Quantity: <span class="quantity-value">0</span></span>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="image-container">
+            <img class="first-image"src="./images/products/special/product-2.jpg"alt="bag"/>
+            <img class="second-image"src="./images/products/special/product-2-2.jpg"alt="bag"/>
+          </div> 
+          <div class="product-caption">
+            <h4>Backpack</h4>
+            <ul>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+            </ul>
+            <p>£25O.00</p>
+            <button class="add-to-cart">Add To Cart</button><br>
+            <button class="remove-from-cart">Remove From Cart</button>
+
+            <span class="product-quantity">Quantity: <span class="quantity-value">0</span></span>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="image-container">
+            <img class="first-image"src="./images/products/product-1.jpg"alt="camera"/>
+            <img class="second-image"src="./images/products/product-1-2.jpg"alt="camera"/>
+          </div> 
+          <div class="product-caption">
+            <h4>Camera</h4>
+            <ul>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+            </ul>
+            <div class="ptags">
+              <p style="text-decoration: line-through;">£150</p>
+              <p>= £100</p>
+              <p class="lclass">Hot Deal</p>
+             </div>
+            <button class="add-to-cart">Add To Cart</button><br>
+            <button class="remove-from-cart">Remove From Cart</button>
+
+            <span class="product-quantity">Quantity: <span class="quantity-value">0</span></span>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="image-container">
+            <img class="first-image"src="./images/products/product-9.jpg"alt="shoe"/>
+            <img class="second-image"src="./images/products/product-9-2.jpg"alt="shoe"/>
+          </div> 
+          <div class="product-caption">
+            <h4>Shoe</h4>
+            <ul>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+            </ul>
+            <p>£299.99</p>
+            <button class="add-to-cart">Add To Cart</button><br>
+            <button class="remove-from-cart">Remove From Cart</button>
+
+            <span class="product-quantity">Quantity: <span class="quantity-value">0</span></span>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="image-container">
+            <img class="first-image"src="./images/products/product-3.jpg"alt="headphones"/>
+            <img class="second-image"src="./images/products/product-3-2.jpg"alt="headphones"/>
+          </div> 
+          <div class="product-caption">
+            <h4>Headphones</h4>
+            <ul>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+            </ul>
+            <div class="ptags">
+              <p style="text-decoration: line-through;">£450</p>
+              <p>= £399.99</p>
+              <p class="lclass">Hot Deal</p>
+             </div>
+            <button class="add-to-cart">Add To Cart</button><br>
+            <button class="remove-from-cart">Remove From Cart</button>
+
+            <span class="product-quantity">Quantity: <span class="quantity-value">0</span></span>
+          </div>
+        </div>
+        <div class="product">
+          <div class="image-container">
+            <img class="first-image"src="./images/products/product-8.jpg"alt="boots"/>
+            <img class="second-image"src="./images/products/product-8-2.jpg"alt="boots"/>
+          </div> 
+          <div class="product-caption">
+            <h4>Mountain Boots</h4>
+            <ul>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+            </ul>
+            <p>£529.99</p>
+            <button class="add-to-cart">Add To Cart</button><br>
+            <button class="remove-from-cart">Remove From Cart</button>
+
+            <span class="product-quantity">Quantity: <span class="quantity-value">0</span></span>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="image-container">
+            <img class="first-image"src="./images/products/special/product-2.jpg"alt="bag"/>
+            <img class="second-image"src="./images/products/special/product-2-2.jpg"alt="bag"/>
+          </div> 
+          <div class="product-caption">
+            <h4>Backpack</h4>
+            <ul>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+            </ul>
+            <p>£250.00</p>
+            <button class="add to cart" >Add To Cart</button><br>
+            <button class="remove-from-cart">Remove From Cart</button>
+
+            <span class="product-quantity">Quantity: <span class="quantity-value">0</span></span>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="image-container">
+            <img class="first-image"src="./images/products/product-1.jpg"alt="camera"/>
+            <img class="second-image"src="./images/products/product-1-2.jpg"alt="camera"/>
+          </div> 
+          <div class="product-caption">
+            <h4>Camera</h4>
+            <ul>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+            </ul>
+            <div class="ptags">
+              <p style="text-decoration: line-through;">£150</p>
+              <p>= £100</p>
+              <p class="lclass">Hot Deal</p>
+             </div>
+            <button class="add-to-cart" >Add To Cart</button><br>
+            <button class="remove-from-cart">Remove From Cart</button>
+
+            <span class="product-quantity">Quantity: <span class="quantity-value">0</span></span>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="image-container">
+            <img class="first-image"src="./images/products/product-9.jpg"alt="shoe"/>
+            <img class="second-image"src="./images/products/product-9-2.jpg"alt="shoe"/>
+          </div> 
+          <div class="product-caption">
+            <h4>Shoe</h4>
+            <ul>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+            </ul>
+            <p>£299.99</p>
+            <button class="add-to-cart" >Add To Cart</button><br>
+            <button class="remove-from-cart">Remove From Cart</button>
+
+            <span class="product-quantity">Quantity: <span class="quantity-value">0</span></span>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="image-container">
+            <img class="first-image"src="./images/products/product-3.jpg"alt="headphones"/>
+            <img class="second-image"src="./images/products/product-3-2.jpg"alt="headphones"/>
+          </div> 
+          <div class="product-caption">
+            <h4>Headphones</h4>
+            <ul>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+            </ul>
+            <div class="ptags">
+              <p style="text-decoration: line-through;">£450</p>
+              <p>= £399.99</p>
+              <p class="lclass">Hot Deal</p>
+             </div>
+            <button class="add-to-cart">Add To Cart</button><br>
+            <button class="remove-from-cart">Remove From Cart</button>
+
+            <span class="product-quantity">Quantity: <span class="quantity-value">0</span></span>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="image-container">
+            <img class="first-image"src="./images/products/product-8.jpg"alt="boots"/>
+            <img class="second-image"src="./images/products/product-8-2.jpg"alt="boots"/>
+          </div> 
+          <div class="product-caption">
+            <h4>Mountain Boots</h4>
+            <ul>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+            </ul>
+            <p>£529.99</p>
+            <button class="add-to-cart">Add To Cart</button><br>
+            <button class="remove-from-cart">Remove From Cart</button>
+
+            <span class="product-quantity">Quantity: <span class="quantity-value">0</span></span>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="image-container">
+            <img class="first-image"src="./images/products/special/product-2.jpg"alt="bag"/>
+            <img class="second-image"src="./images/products/special/product-2-2.jpg"alt="bag"/>
+          </div> 
+          <div class="product-caption">
+            <h4>Backpack</h4>
+            <ul>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+            </ul>
+            <p>£250.00</p>
+            <button class="add-to-cart">Add To Cart</button><br>
+            <button class="remove-from-cart">Remove From Cart</button>
+
+            <span class="product-quantity">Quantity: <span class="quantity-value">0</span></span>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="image-container">
+            <img class="first-image"src="./images/products/product-1.jpg"alt="camera"/>
+            <img class="second-image"src="./images/products/product-1-2.jpg"alt="camera"/>
+          </div> 
+          <div class="product-caption">
+            <h4>Camera</h4>
+            <ul>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+            </ul>
+            <div class="ptags">
+              <p style="text-decoration: line-through;">£150</p>
+              <p>= £100</p>
+              <p class="lclass">Hot Deal</p>
+             </div>
+            <button class="add-to-cart">Add To Cart</button><br>
+            <button class="remove-from-cart">Remove From Cart</button>
+
+            <span class="product-quantity">Quantity: <span class="quantity-value">0</span></span>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="image-container">
+            <img class="first-image"src="./images/products/product-9.jpg"alt="shoe"/>
+            <img class="second-image"src="./images/products/product-9-2.jpg"alt="shoe"/>
+          </div> 
+          <div class="product-caption">
+            <h4>Shoe</h4>
+            <ul>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+            </ul>
+            <p>£299.99</p>
+            <button class="add-to-cart" >Add To Cart</button><br>
+            <button class="remove-from-cart">Remove From Cart</button>
+
+            <span class="product-quantity">Quantity: <span class="quantity-value">0</span></span>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="image-container">
+            <img class="first-image"src="./images/products/product-3.jpg"alt="headphones"/>
+            <img class="second-image"src="./images/products/product-3-2.jpg"alt="headphones"/>
+          </div> 
+          <div class="product-caption">
+            <h4>Headphones</h4>
+            <ul>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+            </ul>
+            <div class="ptags">
+              <p style="text-decoration: line-through;">£450</p>
+              <p>= £399.99</p>
+              <p class="lclass">Hot Deal</p>
+             </div>
+            <button class="add-to-cart" >Add To Cart</button><br>
+            <button class="remove-from-cart">Remove From Cart</button>
+
+            <span class="product-quantity">Quantity: <span class="quantity-value">0</span></span>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="image-container">
+            <img class="first-image"src="./images/products/product-8.jpg"alt="boots"/>
+            <img class="second-image"src="./images/products/product-8-2.jpg"alt="boots"/>
+          </div> 
+          <div class="product-caption">
+            <h4>Mountain Boots</h4>
+            <ul>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+            </ul>
+            <p>£529.99</p>
+            <button class="add-to-cart" >Add To Cart</button><br>
+            <button class="remove-from-cart">Remove From Cart</button>
+
+            <span class="product-quantity">Quantity: <span class="quantity-value">0</span></span>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="image-container">
+            <img class="first-image"src="./images/products/special/product-2.jpg"alt="bag"/>
+            <img class="second-image"src="./images/products/special/product-2-2.jpg"alt="bag"/>
+          </div> 
+          <div class="product-caption">
+            <h4>Backpack</h4>
+            <ul>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+              <li><i class="fas fa-star"></i></li>
+            </ul>
+            <p>£250.00</p>
+            <button class="add-to-cart">Add To Cart</button><br>
+            <button class="remove-from-cart">Remove From Cart</button>
+
+            <span class="product-quantity">Quantity: <span class="quantity-value">0</span></span>
+          </div>
+        </div>
+
+
+      </section>
+    </div>
+    <footer>
+      <div>
+        <h2>Sign Up to Newsletter</h2>
+        <form action="#" method="post">
+          <input type="email" id="email" placeholder="Enter your email*" required/>
+          <input type="submit"value="Subscribe"/>
+        </form>
+      </div>
+      <div>
+        <h2>Customer Care</h2>
+        <div class="chat-box">
+          <!-- Replace this with an actual chat box widget if available -->
+          <p>Live Chat</p>
+        </div>
+        <a href="#">Chat Now</a>
+      </div>
+      <div>
+        <h2>Contact Us</h2>
+        <p>Call us now: +44 4800 1234 4567</p>
+        <p>Email: support@videocommerce.com</p>
+        <div class="social-icons">
+          <a href="#" class="fab fa-facebook-f"></a>
+          <a href="#" class="fab fa-twitter"></a>
+          <a href="#" class="fab fa-instagram"></a>
+          <a href="#" class="fab fa-linkedin-in"></a>
+        </div>
+      </div>
+    </footer>
+    <section class="footer2">
+      <div class="payment-links">
+        <div class="pay-left">
+          <strong>Shopping in the UK</strong>
+        </div>
+        <div class="pay-right">
+          <img src="./images/demo21/payment-icon.png" alt="" />
+        </div>
+      </div>
+    </section>
+    <div class="additional-footer">
+      &copy; 2024 360 Video and Animation E-Commerce. All rights reserved.
+    </div>
+    <script>
+        
+        const products = document.querySelectorAll('.product');
+
+          products.forEach(product => {
+            const cartLink = document.getElementById('cart-link');
+            const cartTotalSpan = document.getElementById('cart-total');
+          const addButton = product.querySelector('.add-to-cart');
+          const removeButton = product.querySelector('.remove-from-cart');
+          const quantitySpan = product.querySelector('.quantity-value');
+          let quantity = 0;
+          let cartTotal= 0;
+          if (addButton && removeButton) {
+            addButton.addEventListener('click', () => {
+              cartTotal++;
+              updateCartTotal();
+              quantity++;
+              quantitySpan.textContent = quantity;
+            });
+
+            removeButton.addEventListener('click', () => {
+              if (quantity > 0) {
+                 cartTotal--;
+                 updateCartTotal();
+                 quantity--;
+                quantitySpan.textContent = quantity;
+              }
+            });
+            function updateCartTotal() {
+              cartTotalSpan.textContent = cartTotal;
+              cartLink.textContent = `cart (${cartTotal})`
+            }
+          }
+        });
+
+        function toTheRight() {
+        let b = document.getElementsByTagName("marquee");
+        let x = 0;
+        setInterval(function () {
+          if (x === 1000) {
+          clearInterval();
+          } else {
+          x++;
+          b.style.left = x + "px";
+          }
+          }, 2);
+        }
+
+        const buttons = document.querySelectorAll('.add-to-cart, .remove-from-cart');
+
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    if (button.classList.contains('remove-from-cart')) {
+      button.classList.add('red');
+      setTimeout(() => {
+        button.classList.remove('red');
+      }, 100);
+    } else {
+      button.classList.toggle('moved');
+      setTimeout(() => {
+        button.classList.remove('moved');
+      }, 100);
+    }
+  });
+});
+
+ 
+//for the subsribe button
+ let subscribeBtn = document.querySelector("input[type='submit'][value='Subscribe']");
+subscribeBtn.addEventListener("click", subscribe);
+
+function subscribe() {
+  let email = document.getElementById("email").value;
+  alert(email + " you have successfully subscribed to Newsletter");
+}
+
+    </script>
+  </body>
+</html>
